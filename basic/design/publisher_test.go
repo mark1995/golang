@@ -37,6 +37,8 @@ func TestPublisher(t *testing.T) {
 		//		fmt.Println("golang subscribe receive message ", msg)
 		//	}
 		//}
+		// for range channel 、 for select channel
+		// close channel 的差异，for select 会一直收到nil的消息，如果收到了nil的消息
 		for msg := range golang {
 			fmt.Println(" golang subscribe receive message ", msg)
 		}
