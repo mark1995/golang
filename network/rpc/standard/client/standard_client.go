@@ -11,7 +11,7 @@ import (
 func main() {
 	client, err := rpc.Dial("tcp", ":1234")
 	if err != nil {
-		log.Fatal("client connect server err ", err)
+		log.Fatal("server connect server err ", err)
 	}
 	var response string
 	err = client.Call("HelloService.Hello", "my first rpc ", &response)
